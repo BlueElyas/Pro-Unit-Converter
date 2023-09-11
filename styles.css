@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: middle;
+    align-items: center;
+}
+
+#hero {
+    background: #6943FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 550px;
+    height: 285px;
+
+}
+
+#hero h1 {
+    color: #FFFFFF;
+   
+
+}
+
+::placeholder {
+    color: #FFFFFF;
+
+}
+
+#hero input {
+    text-align: center;
+    background-color: transparent;
+    border:  2px solid #B295FF;
+    border-radius: 5px;
+    width: 120px;
+    height: 90px;
+    font-weight: bold;
+}
+input, select, textarea {
+    color: white;
+    font-size: 58px;
+    font-family: "Inter";
+    
+    }
+    
+
+button {
+    border: none;
+    padding: 12px 27.5px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    font-size: 18px;
+    font-family: 'Inter';
+    transition: 1s;
+    cursor: grab;
+    position: relative;
+
+}
+
+
+
+button:hover {
+    background:  red;
+}
+
+#bottom-half {
+    background: #1F2937;
+    width: 550px;
+    height:  500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.box-design {
+    width: 500px;
+    height: 108px;
+    background: #273549;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-design h2 {
+    color: #CCC1FF;
+}
+
+#bottom-half p {
+    margin-top: 10px;
+    color: white;
+}
