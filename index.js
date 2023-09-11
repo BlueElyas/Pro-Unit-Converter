@@ -4,32 +4,37 @@ let lengthUnit = document.getElementById("Length")
 let volumeUnit = document.getElementById("Volume")
 let massUnit = document.getElementById("Mass")
 
+const meterToLength = 3.281
+const lengthToMeter = 1/meterToLength
+const litersToGallons = 0.264
+const gallonsToLiters = 1/litersToGallons
+const kilosToPounds = 3.204
+const poundsToKilos = 1/kilosToPounds
 
-function getVal () {
-    const val = document.querySelector("#input-number").value
-    return val
-}
+
+const baseValue = document.querySelector("#input-number")
+
 
 converterButton.addEventListener("click", function lengthConverter () {
     lengthUnit.innerHTML = `
-        ${getVal()} meters =  
-        ${(getVal() * 3.281).toFixed(3)} feet 
+        ${baseValue.value} meters =  
+        ${(baseValue.value * meterToLength).toFixed(3)} feet 
         | 
-        ${getVal()} feet =
-        ${(getVal() * 0.305).toFixed(3)} meters 
+        ${baseValue.value} feet =
+        ${(baseValue.value * lengthToMeter).toFixed(3)} meters 
         `
     volumeUnit.innerHTML = `
-        ${getVal()} liters =  
-        ${(getVal() * 0.264).toFixed(3)} gallons 
+        ${baseValue.value} liters =  
+        ${(baseValue.value * litersToGallons).toFixed(3)} gallons 
         | 
-        ${getVal()} gallons = 
-        ${(getVal() * 3.788).toFixed(3)} liters 
+        ${baseValue.value} gallons = 
+        ${(baseValue.value * gallonsToLiters).toFixed(3)} liters 
     `
     massUnit.innerHTML = `
-        ${getVal()} kilos =  
-        ${(getVal() * 3.204).toFixed(3)} pounds 
+        ${baseValue.value} kilos =  
+        ${(baseValue.value * kilosToPounds).toFixed(3)} pounds 
         | 
-        ${getVal()} pounds = 
-        ${(getVal() * 0.454).toFixed(3)} kilos 
+        ${baseValue.value} pounds = 
+        ${(baseValue.value * poundsToKilos).toFixed(3)} kilos 
     `
 })
